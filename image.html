@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <style>
+            .form{
+                border-radius: 20px;
+                /* border: solid 2px; */
+                display: flex;
+                justify-content: center;
+            }
+
+            .container{
+                height: 80vh;
+                align-content: center;
+            }
+            .link{
+                text-transform: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="link"><a  href="./index.html">Search</a></h1>
+        <h3 class="link"><a  href="./advanced.html">Advanced</a></h3>
+        <div class="container">
+
+            <form class="form" id="searchImg">
+                <input type="text" name="q" id="searchTerm">
+                <input type="submit" value="Google Search Images" >                
+            </form>
+        </div>
+        <script>
+            const imgSearch = document.getElementById("searchImg")
+            imgSearch.addEventListener('submit',() => {
+                event.preventDefault();
+                const searchTerm = document.getElementById('searchTerm').value;
+                window.location.href = `https://www.google.com/search?q=${searchTerm}&tbm=isch`                                
+            })
+        </script>
+    </body>
+</html>
